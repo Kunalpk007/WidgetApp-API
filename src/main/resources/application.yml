@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /my-app
+
+logging:
+  level:
+    root: info
+
+management:
+  endpoint:
+    health:
+      show-detail: always
+      show-components: always
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+      show_sql: true
+      format_sql: true
+  h2:
+    console:
+      enabled: true
+
